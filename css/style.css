@@ -5,11 +5,15 @@
     --hover-gray: #a0a0a0;
 }
 
-body{
+body {
     font-family: sans-serif;
 }
 
-.nav{
+/* =====================
+   NAVBAR
+   ===================== */
+
+.nav {
     display: flex;
     flex-direction: column; 
 }
@@ -24,6 +28,7 @@ body{
     background: var(--nav-bg);
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
 
     animation: change-color linear both;
     animation-timeline: scroll(root);
@@ -31,7 +36,7 @@ body{
 }
 
 @keyframes change-color {
-    to   { background: #436A5B; }
+    to { background: #436A5B; }
 }
 
 .nav-group {
@@ -96,7 +101,7 @@ body{
     cursor: pointer;
 }
 
-.nav-btn-cta:hover{
+.nav-btn-cta:hover {
     background: #ef2c6a;
 }
 
@@ -112,31 +117,24 @@ body{
     margin-left: 10px;
 }
 
-.nav .nav-link {
-    color: var(--text-light);
-}
-
 .nav .nav-link:hover {
     color: var(--text-light);
     text-decoration: underline solid;
 }
 
-.nav-logo{
+.nav-logo {
     padding-top: 50px;
     height: 185.5px;
     display: flex;
     justify-content: center; 
     align-items: center;     
+    background: #436A5B;
 }
 
-.nav-secondary{
+.nav-secondary {
     display: flex;
     justify-content: center;
     padding-bottom: 5px;
-}
-
-
-.nav-logo, .nav-secondary{
     background: #436A5B;
 }
 
@@ -146,29 +144,32 @@ body{
     font-style: italic;
     color: white;
     letter-spacing: -1px;
-    font-size: 1.2rem;
 }
 
 .nav-group > span:last-child {
+    position: absolute;
     opacity: 0;
+    font-size: 1.5rem;
     animation: show-logo linear both;
     animation-timeline: scroll(root);
     animation-range: 80px 81px;
 }
 
 @keyframes show-logo {
-    to { opacity: 1; }
+    to { 
+        position: relative;
+        opacity: 1;
+     }
 }
 
-.nav-logo span{
-    font-size: 4rem;
+.nav-logo span {
+    font-size: 5rem;
 }
 
-.nav-group > span:last-child{
-    font-size: 1.5rem;
-}
+/* =====================
+   FRONT PAGE
+   ===================== */
 
-/*FRONT PAGE*/
 .front-page {
     display: flex;
     flex-direction: column; 
@@ -176,7 +177,7 @@ body{
     text-align: center;
 }
 
-.front-page a{
+.front-page a {
     color: #000000;
     text-decoration: none;
     font-weight: 800;
@@ -184,7 +185,7 @@ body{
     margin: 5px 5px;
 }
 
-.front-page a:hover{
+.front-page a:hover {
     text-decoration: underline;
 }
 
@@ -197,49 +198,122 @@ body{
 }
 
 .front-page img {
-    height: auto;           
-    width: 40%;            
+    width: 40%;
+    height: auto;
+    object-fit: cover;
 }
 
-/*LATEST NEWS AND SHOPPING*/
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0;
+/* =====================
+   SECTION LAYOUT & IMAGES
+   ===================== */
+
+.container-fluid.news-shopping {
+    padding-left: clamp(16px, calc(-111px + 16vw), 80px);
+    padding-right: clamp(16px, calc(-111px + 16vw), 80px);
+    max-width: 1300px;
 }
 
-.section-title::after {
-  content: '';
-  display: block;
-  flex: 1;
-  height: 1px;
-  background-color: #000;
+.section-block.latest-news {
+    padding-top: 70px;
+    padding-right: clamp(12px, calc(-120px + 11vw), 80px);
 }
 
-.news header{
+.section-block header {
     margin-bottom: 15px;
 }
 
-article a{
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 2px;
+    background-color: #000;
+}
+
+/* GENERAL IMAGE RULES */
+.card-article img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-article a {
     text-decoration: none;
     color: #000000;
 }
 
-article a:hover{
+.card-article a:hover {
     text-decoration: underline;
 }
 
-article.main-news a{
+.card-primary a {
     font-size: 2rem;
 }
 
-article.secondary-news a{
+.card-secondary a {
     font-size: 1.25rem;
 }
 
-article.extra-news a{
+.card-secondary:first-child {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.card-secondary:first-child img {
+    flex: 1 1 0;
+    width: 50%;
+    min-width: 0;
+}
+
+.card-secondary:first-child h3 {
+    flex: 1 1 0;
+    width: 50%;
+    min-width: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.card-compact a {
     font-size: 1rem;
+}
+
+.aside-container article.card-article {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 1199px) {
+    .latest-news .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+@media screen and (max-device-width: 1024px) {
+    .nav-secondary {
+        display: none;
+    }
+} 
+
+@media screen and (max-device-width: 770px) {
+    .nav-logo span {
+        font-size: 4rem;
+    }
+
+
 }
