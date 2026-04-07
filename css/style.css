@@ -170,6 +170,11 @@ body {
    FRONT PAGE
    ===================== */
 
+main {
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
 .front-page {
     display: flex;
     flex-direction: column; 
@@ -207,8 +212,12 @@ body {
    SECTION LAYOUT & IMAGES
    ===================== */
 
-.latest-news header {
-    margin-bottom: 15px;
+.latest-news{
+    margin-bottom: 35px;
+}
+
+.latest-news > header {
+    margin-bottom: 24px;
 }
 
 .section-title {
@@ -238,6 +247,7 @@ body {
 .card-article a {
     text-decoration: none;
     color: #000000;
+    font-weight: 700;
 }
 
 .card-article a:hover {
@@ -255,7 +265,7 @@ body {
 .card-secondary:first-child {
     display: flex;
     align-items: flex-start;
-    gap: 0;
+    gap: 6px;
 }
 
 .card-secondary:first-child img {
@@ -283,7 +293,8 @@ body {
     flex-direction: row;
     align-items: flex-start;
     gap: 15px;
-    padding: 24px 0;
+    margin: 21px 0;
+    padding-bottom: 21px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -309,6 +320,167 @@ body {
 
 
 /* =====================
+   HUFFPOST DAILY
+   ===================== */
+.box.support{
+    background-color: #e9f8ed;
+    content-visibility: auto;
+    margin-bottom: 50px;
+    padding: 8px;
+    width: 100%;
+}
+
+.support-inner{
+    background-color: #e9f8ed;
+    border: 1px dashed #61ae96;
+    color: #222;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.support-headline{
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    margin-bottom: 24px;
+    gap: 15px;
+}
+
+.support-inner > p{
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.support-inner > button{
+    background-color: #2e7061;
+    border: 1px solid #2e7061;
+    color: #fff;
+    margin-bottom: 16px;
+    font-size: 12px;
+    padding: 11px 23px;
+    font-weight: 700;
+}
+
+.support-inner > p > a{
+    color: #2e7061;
+    text-decoration: none;
+}
+
+#head-first{
+    font-size: 3rem;
+    line-height: 2.3125rem;
+}
+
+#head-second{
+    font-size: 4.5rem;
+    line-height: 2.3125rem;
+}
+
+#head-third{
+    font-size: 3rem;
+    line-height: 2.3125rem;
+    
+}
+
+/* =====================
+   HUFFPOST DAILY
+   ===================== */
+
+.daily-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2d6a4f; /* verde scuro come nell'immagine */
+    padding: 0.4rem 0.75rem;
+    gap: 0.75rem;
+    overflow: hidden;
+}
+
+/* --- Ticker (scritta scorrevole) --- */
+.ticker-wrap {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    animation: ticker-scroll 12s linear infinite;
+}
+
+@keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.play-pause-btn {
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box.daily{
+    display: block;
+    font-weight: 500;
+}
+
+.checklist-content{
+    padding: 14px 20px 35px;
+}
+
+.checklist-content > p{
+    font-size: 1rem;
+}
+
+.checklist-content > p:first-child{
+    margin-bottom: 8px;
+}
+
+.checklist-content > p:last-child{
+    margin-bottom: 16px;
+}
+
+.checklist-item{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 11px;
+    border-radius: 4px;
+    background: #fff;
+    margin-bottom: 6px;
+    box-shadow: 3px 3px 7px 0 hsla(0, 0%, 77%, .251);
+    height: 72px;
+    cursor: pointer;
+}
+
+.checklist-item > p{
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.checklist-item > svg{
+    height: 100%;
+    width: 52px;
+}
+
+
+
+
+/* =====================
    GRID
    ===================== */
 .grid-container {
@@ -316,7 +488,6 @@ body {
   grid-template-columns: minmax(0, 700px) minmax(0, 320px);
   justify-content: space-between;
   gap: 20px clamp(20px, calc(100% - 700px - 320px), 100px);
-  padding: 10px;
   width: 100%;
   max-width: 1120px;
   box-sizing: border-box;
@@ -332,7 +503,7 @@ body {
 }
 
 .content-group{
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .box {
@@ -348,7 +519,7 @@ body {
   height: auto; 
 }
 
-.box.latest-news, .box.shopping-aside{
+.latest-news, .shopping-aside{
     display: block;
 }
 
@@ -371,6 +542,7 @@ body {
 .box:last-child   { grid-area: voices; }
 
 @media (max-width: 1024px) {
+    /*GRID*/
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -388,7 +560,15 @@ body {
     display: none;
   }
 
-  .box {
-    margin-top: 0;
+  /*SUPPORT*/
+
+  .support-inner > button{
+    width: 100%;
   }
+
+  /*HUFFPOST DAILY*/
+  .checklist-item > svg{
+    margin-left: auto;
+    width: 25px;
+}
 }
