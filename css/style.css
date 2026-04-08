@@ -242,6 +242,7 @@ main {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 .card-article a {
@@ -257,33 +258,31 @@ main {
 .card-primary a {
     font-size: 2rem;
 }
-
 .card-secondary a {
     font-size: 1.25rem;
 }
 
-.card-secondary:first-child {
+/* Applica flex a TUTTE le card-secondary, non solo alla prima */
+.card-secondary {
     display: flex;
     align-items: flex-start;
-    gap: 6px;
+    flex-direction: row;
+    /* Usiamo il gap, ma dobbiamo tenerne conto nel calcolo della larghezza */
+    gap: 15px; 
 }
 
-.card-secondary:first-child img {
-    flex: 1 1 0;
-    width: 50%;
-    min-width: 0;
+.card-secondary img {
+    width: calc(50% - 7.5px); 
+    height: auto; 
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
-.card-secondary:first-child h3 {
-    flex: 1 1 0;
-    width: 50%;
-    min-width: 0;
-    padding-left: 12px;
-    padding-right: 12px;
-    box-sizing: border-box;
+.card-secondary h3 {
     margin: 0;
+    line-height: 1.4;
+    font-size: 1rem;
 }
-
 .card-compact a {
     font-size: 1rem;
 }
@@ -720,6 +719,24 @@ main {
 }
 
 
+/* =====================
+   WHAT'S HAPPENING
+   ===================== */
+.box.whats-happening{
+    display: block;
+}
+
+.content-group header{
+    margin-bottom: 24px;
+}
+
+.box.life-1{
+    display: block;
+}
+
+.box.dont-miss{
+    display: block;
+}
 
 /* =====================
    GRID
@@ -739,7 +756,7 @@ main {
 .content-group, .sidebar-group {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
     width: 100%; 
 }
 
@@ -791,10 +808,6 @@ main {
       "life-2" "shopping-2" "voices";
   }
 
-  .content-group, .sidebar-group {
-    display: contents; 
-  }
-
   .box.follow-us, .box.morning-mail, .box.shopping-aside {
     display: none;
   }
@@ -809,5 +822,10 @@ main {
   .checklist-item > svg{
     margin-left: auto;
     width: 25px;
-}
+    }
+
+    /*SUBMIT TIP*/
+    .box.submit-tip{
+        border: none;
+    }
 }
