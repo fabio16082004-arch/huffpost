@@ -171,7 +171,7 @@ body {
    ===================== */
 
 main {
-    padding: 0 8px;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
@@ -582,6 +582,144 @@ main {
 }
 
 
+/* =====================
+   MORNING MAIL
+   ===================== */
+
+.box.morning-mail{
+    display: block;
+}
+
+.morning-mail{
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 32px 0;
+}
+
+.morning-mail-title{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.morning-mail-content > p{
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.morning-mail-input{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.morning-mail-address{
+    border: 1px solid #dbdbdb;
+    border-radius: 21.5px;
+    height: 100%;
+    font-size: .75rem;
+    margin-left: 16px;
+    padding: 1px 2px 1px 20px;
+}
+
+.morning-mail-address:focus {
+    outline: 2px solid #a020f0; 
+    outline-offset: 3px;
+}
+
+.morning-mail-signup-button{
+    background: #2e7061;
+    border: none;
+    border-radius: 21.5px;
+    color: #fff;
+    font-size: .875rem;
+    padding: 10px 26px;
+}
+
+.slidedown{
+    text-align: center;
+    font-size: .75rem;
+    font-weight: 400;
+    color: #666;
+    padding-top: 10px;
+}
+
+/* =====================
+   FOLLOW US
+   ===================== */
+
+.box.follow-us{
+    display: block;
+    width: 300px;
+    margin: 0 auto 60px;
+    padding-bottom: 32px;
+}
+
+.follow-us > header{
+    display: flex;
+    justify-content: center;
+}
+
+.follow-us-title{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 750;
+    letter-spacing: .5px;
+    margin: 24px 0 14px;
+}
+
+.social-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px
+}
+
+.social-buttons-item > a > i{
+    font-size: 2rem;
+    color: grey;
+}
+
+/* =====================
+   SUBMIT
+   ===================== */
+
+.box.submit-tip{
+    display: block;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 32px 0;
+}
+
+.tip-title{
+    display: flex;
+    justify-content: center;
+    gap: 8px;         
+}
+
+.tip-title > h2{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 750;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+
+.submit-tip > p{
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 470;
+}
+
+.submit-tip a{
+    color: black;
+}
+
+
 
 /* =====================
    GRID
@@ -610,10 +748,8 @@ main {
 }
 
 .box {
-  border: 2px solid #333;
   font-weight: bold;
   font-size: 1.2rem;
-  background-color: #f9f9f9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -659,7 +795,7 @@ main {
     display: contents; 
   }
 
-  .follow-us, .morning-mail, .shopping-aside {
+  .box.follow-us, .box.morning-mail, .box.shopping-aside {
     display: none;
   }
 
