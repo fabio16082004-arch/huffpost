@@ -687,7 +687,6 @@ main {
    ===================== */
 
 .box.submit-tip{
-    display: block;
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
     padding: 32px 0;
@@ -722,21 +721,46 @@ main {
 /* =====================
    WHAT'S HAPPENING
    ===================== */
-.box.whats-happening{
-    display: block;
-}
 
 .content-group header{
     margin-bottom: 24px;
 }
 
-.box.life-1{
+.box.life-1, .box.dont-miss, .box.whats-happening, .box.submit-tip, .box.personal, .box.politics, .box.entertainment, .box.voices{
     display: block;
 }
 
-.box.dont-miss{
-    display: block;
+/* =====================
+   ENTERTAINMENT and POLITICS
+   ===================== */
+
+.politics footer, .entertainment footer, .voices footer{
+    display: flex;
+    justify-content: flex-end;
+}   
+
+.more-link{
+    color: #000;
 }
+
+/* =====================
+   VOICES
+   ===================== */
+
+.voices{
+    background-color: #F7EFEF;
+    box-shadow: 0 0 0 20px #F7EFEF;
+}
+
+#section-title-voices{
+    font-family: Grotesque_Bold Fallback;
+}
+
+.voices .card-article h3, .life-2 .card-article h3{
+    font-size: .6875rem;
+    padding: 8px 12px 16px 0;
+}
+
 
 /* =====================
    GRID
@@ -795,17 +819,37 @@ main {
 .entertainment    { grid-area: entertainment; }
 .life-2           { grid-area: life-2; } 
 .shopping         { grid-area: shopping-2; }
-.box:last-child   { grid-area: voices; }
+.voices           { grid-area: voices; }
 
 @media (max-width: 1024px) {
+
+    .content-group, 
+    .sidebar-group {
+        display: contents; /* Permette il mescolamento degli elementi */
+    }
+
     /*GRID*/
   .grid-container {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
-      "news" "support" "happening" 
-      "video" "life-1" "submit-tip" "games" "daily"  
-      "dont-miss" "history" "other-news" "personal" "politics" "entertainment" 
-      "life-2" "shopping-2" "voices";
+            "news" 
+            "support" 
+            "happening" 
+            "video" 
+            "life-1" 
+            "submit-tip" 
+            "games" 
+            "daily"  
+            "dont-miss" 
+            "history" 
+            "other-news" 
+            "personal" 
+            "politics" 
+            "entertainment" 
+            "life-2" 
+            "shopping-2" 
+            "voices";
   }
 
   .box.follow-us, .box.morning-mail, .box.shopping-aside {
@@ -827,5 +871,6 @@ main {
     /*SUBMIT TIP*/
     .box.submit-tip{
         border: none;
+        padding: 0;
     }
 }
