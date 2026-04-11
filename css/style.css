@@ -138,7 +138,7 @@ body {
     background: #436A5B;
 }
 
-.nav-logo span, .nav-group > span:last-child {
+.nav-logo span, .nav-group > span:last-child, .footer-title {
     font-family: sans-serif;
     font-weight: 900;
     font-style: italic;
@@ -245,13 +245,13 @@ main {
     object-fit: cover;
 }
 
-.card-article a {
+.card-article a, .games-item a, .news-item a {
     text-decoration: none;
     color: #000000;
     font-weight: 700;
 }
 
-.card-article a:hover {
+.card-article a:hover, .games-item a:hover, .news-item a:hover {
     text-decoration: underline;
 }
 
@@ -714,7 +714,7 @@ main {
 }
 
 .submit-tip a{
-    color: black;
+    color: #000;
 }
 
 
@@ -726,21 +726,121 @@ main {
     margin-bottom: 24px;
 }
 
-.box.life-1, .box.dont-miss, .box.whats-happening, .box.submit-tip, .box.personal, .box.politics, .box.entertainment, .box.voices{
+.box.life-1, .box.dont-miss, .box.whats-happening, .box.submit-tip, .box.personal, .box.politics, .box.entertainment, .box.voices,
+.box.shopping, .box.life-2, .box.other-news, .box.games, .box.video{
     display: block;
 }
+
+/* =====================
+   VIDEO
+   ===================== */
+.video-wrapper video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =====================
+   OTHER NEWS 
+   ===================== */
+
+.games-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.games-item h3{
+    font-size: 1.25rem
+}
+
+
+
+/* =====================
+   OTHER NEWS 
+   ===================== */
+
+.news-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 32px 0;
+    gap: 20px;
+}
+
+.news-item h3{
+    font-size: 1.75rem;
+}
+
+.news-item img{
+    width: 100%;
+}
+
+
 
 /* =====================
    ENTERTAINMENT and POLITICS
    ===================== */
 
-.politics footer, .entertainment footer, .voices footer{
+#section-title-life-2{
+    font-size: 1.875rem;
+    background-color: #f4915b;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px #0552b1;
+    display: inline;
+    padding: 0 7px;
+}
+
+.politics footer, .entertainment footer, .voices footer, .shopping footer, .life-2 footer{
     display: flex;
     justify-content: flex-end;
 }   
 
 .more-link{
     color: #000;
+}
+
+/* =====================
+   SHOPPING and LIFE-2
+   ===================== */
+.shopping, .life-2{
+    background-color: #EFEFEF;
+     background-color: #EFEFEF;
+    box-shadow: 0 0 0 20px #EFEFEF;
+}  
+
+.life-2 .card-article h3{
+    margin-top: 8px;
+    font-size: 1rem;
+    padding-bottom: 16px;
+}
+
+.footer-button{
+    color: #0552b1;
+    font-family: Poppins, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: underline;
+    border: 1px solid #0552b1;
+    border-radius: 100px;
+    padding: 10px 20px;
+}
+
+#section-title-shopping{
+    background: linear-gradient(0deg, #f4915b 45%, transparent 0);
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-right: 16px;
+    padding-bottom: 3px;
+}
+
+.shopping .card-article h3{
+    font-size: 1.1rem;
 }
 
 /* =====================
@@ -756,9 +856,168 @@ main {
     font-family: Grotesque_Bold Fallback;
 }
 
-.voices .card-article h3, .life-2 .card-article h3{
-    font-size: .6875rem;
+.voices .card-article h3, .shopping .card-article h3{
     padding: 8px 12px 16px 0;
+}
+
+.voices .card-article h3{
+    font-size: .6875rem;
+}
+
+.footer-title {
+    font-size: 1.7rem;
+    padding-right: 80px; 
+}
+
+.site-footer {
+    background-color: #2d4a3e;
+    margin-top: 80px;   
+    width: 100%;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-bold a {
+    font-weight: 800;
+}
+
+.footer-item a {
+    color: #b3dace;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.02rem;
+    margin-bottom: .93rem;
+}
+
+.branding {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+}
+
+.branding div {
+    color: #fff;
+    font-size: 0.9rem;
+    opacity: .8;
+    padding: 10px 0;
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+   .footer-title {
+        font-size: 2.5rem ;
+        display: flex;
+        align-self: flex-start;
+        padding-right: 30px; 
+    }
+
+    .footer-full-text{
+       display: none;
+        visibility: hidden;
+    }
+}
+
+/* =====================
+   GRID FOOTER
+   ===================== */
+
+.footer-content {
+    display: grid;
+    padding: 45px 30px 38px;
+    gap: 0px;
+    grid-template-columns: auto repeat(5, 1fr);
+    align-items: start;
+    grid-template-areas: "title box-1 box-2 box-3 box-4 box-5";
+}
+
+.branding{
+    margin: 0 30px;
+}
+
+.footer-box-1{grid-area: box-1;}
+.footer-box-2{grid-area: box-2;}
+.footer-box-3{grid-area: box-3;}
+.footer-box-4{grid-area: box-4;}
+.footer-box-5{grid-area: box-5;}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(6, 1fr); 
+        padding: 40px 20px 38px;
+        column-gap: 20px; 
+        row-gap: 30px;    
+    }
+
+    .branding{
+        margin: 0 20px;
+    }
+
+    .footer-title {
+        grid-column: 1 / span 6; 
+        font-size: 2rem;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-box-1 { 
+        grid-row: 2;
+        grid-column: 1 / span 3; 
+    }
+    .footer-box-2 { 
+        grid-row: 2;
+        grid-column: 4 / span 3; 
+    }
+
+    .footer-box-3 { 
+        grid-row: 3;
+        grid-column: 1 / span 2; 
+    }
+    .footer-box-4 { 
+        grid-row: 3;
+        grid-column: 3 / span 2; 
+    }
+    .footer-box-5 { 
+        grid-row: 3;
+        grid-column: 5 / span 2; 
+    }
+}
+
+@media (max-width: 768px){
+    .footer-box-5{
+        display: contents;
+    }
+
+    .footer-policy{grid-area: policy;}
+    .footer-consent-preferences{grid-area: preferences;}
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title  title"
+            "box-1  box-2"
+            "box-3  box-4"
+            "policy preferences";
+        align-items: start;
+        padding: 40px 20px 38px;
+    }
+
+    .footer-box-1,
+    .footer-box-2,
+    .footer-box-3,
+    .footer-box-4 {
+        padding-top: 20px;
+    }
+
+    .branding{
+        display: block;
+        margin: 0 20px;
+    }
+
+    .branding div{
+        text-align: center;
+    }
 }
 
 
@@ -825,7 +1084,7 @@ main {
 
     .content-group, 
     .sidebar-group {
-        display: contents; /* Permette il mescolamento degli elementi */
+        display: contents;
     }
 
     /*GRID*/
@@ -861,6 +1120,22 @@ main {
   .support-inner > button{
     width: 100%;
   }
+
+  /*OTHER NEWS*/
+  .news-item{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*GAMES*/
+
+  .games-item{
+    align-items: flex-start;
+  }
+
+  .games-item img{
+    width: 100%;
+    }
 
   /*HUFFPOST DAILY*/
   .checklist-item > svg{
