@@ -21,7 +21,7 @@ body {
    ===================== */
 
 .nav {
-    display: flex;
+    display: block;
     flex-direction: column; 
 }
 
@@ -50,6 +50,10 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+} 
+
+.nav-group .nav-link{
+    white-space: nowrap;
 }
 
 .nav-btn {
@@ -106,6 +110,7 @@ body {
     font-weight: 700;
     font-size: 0.75rem;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .nav-btn-cta:hover {
@@ -130,12 +135,18 @@ body {
 }
 
 .nav-logo {
-    padding-top: 50px;
-    height: 185.5px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center; 
-    align-items: center;     
     background: #436A5B;
+}
+
+.main-logo{
+    height: auto;
+    margin: 32px auto;
+    max-width: 100%;
 }
 
 .nav-secondary {
@@ -145,18 +156,11 @@ body {
     background: #436A5B;
 }
 
-.nav-logo span, .nav-group > span:last-child, .footer-title {
-    font-family: sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    color: white;
-    letter-spacing: -1px;
-}
-
-.nav-group > span:last-child {
+.nav-group .main-logo {
+    height: 16px; /* Imposta l'altezza desiderata */
+    width: auto;  /* Mantieni le proporzioni originali */
     position: absolute;
     opacity: 0;
-    font-size: 1.5rem;
     animation: show-logo linear both;
     animation-timeline: scroll(root);
     animation-range: 80px 81px;
@@ -168,11 +172,6 @@ body {
         opacity: 1;
      }
 }
-
-.nav-logo span {
-    font-size: 5rem;
-}
-
 /* =====================
    FRONT PAGE
    ===================== */
@@ -207,12 +206,6 @@ main {
     padding: 5px; 
     font-style: italic;
     font-size: 7vw;
-}
-
-.front-page img {
-    width: 40%;
-    height: auto;
-    object-fit: cover;
 }
 
 /* =====================
@@ -269,12 +262,10 @@ main {
     font-size: 1.25rem;
 }
 
-/* Applica flex a TUTTE le card-secondary, non solo alla prima */
 .card-secondary {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
-    /* Usiamo il gap, ma dobbiamo tenerne conto nel calcolo della larghezza */
     gap: 15px; 
 }
 
@@ -315,14 +306,6 @@ main {
         display: none;
     }
 } 
-
-@media screen and (max-device-width: 770px) {
-    .nav-logo span {
-        font-size: 4rem;
-    }
-
-
-}
 
 
 /* =====================
@@ -891,12 +874,21 @@ main {
     max-width: 100%;
 }
 
-.footer-title {
+.footer-content .link-logo{
+    width: 126px;
     display: flex;
     align-self: center;
-    font-size: 1.7rem;
-    padding-right: 40px;
+    margin-right: 40px;
     grid-area: title;
+    text-decoration: none;
+}
+
+.alternative-logo{
+    display: none;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: white;
 }
 
 .footer-item {
@@ -911,6 +903,14 @@ main {
     letter-spacing: 0.02rem;
     padding-bottom: .93rem;
     align-self: start;
+}
+
+.footer-box-bold .footer-item a:hover{
+    color: #fff;
+}
+
+.footer-item a:hover{
+    color: #EFEFEF;
 }
 
 .footer-box-bold {
@@ -951,6 +951,17 @@ main {
     padding: 10px 0;
 }
 
+@media (max-width: 1024px) {
+    /*FOOTER*/
+      .footer-content .main-logo {
+        margin: 0;
+    }
+
+     .footer-content .link-logo{
+        height: 50px;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .footer-content {
         grid-template-columns: 1fr;
@@ -960,11 +971,6 @@ main {
             "box-normal";
         padding: 40px 20px 38px;
         gap: 30px 0;
-    }
-
-    .footer-title {
-        font-size: 2rem;
-        padding-right: 0;
     }
 
     .footer-box-bold {
@@ -984,6 +990,31 @@ main {
 }
 
 @media (max-width: 767px) {
+    /*NAVBAR*/
+    .front-page img {
+        width: 100vw;       
+        height: auto;       
+        display: block;     
+    }
+
+    /*NAVBAR*/
+    .hide-nav{
+        animation: hide-nav-btn linear both;
+        animation-timeline: scroll(root);
+        animation-range: 80px 81px;
+        opacity: 1;
+    }
+ 
+    @keyframes hide-nav-btn {
+        to { 
+            opacity: 0;
+            width: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+
+    /*FOOTER*/
     .footer-content {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -1022,15 +1053,23 @@ main {
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-    .footer-title {
-        font-size: 2.5rem;
-        align-self: flex-start;
-        padding-right: 30px;
+    .footer-content .link-logo {
+        display: flex; 
+        
+        width: auto; 
+        
+        align-self: start;
+        margin-right: 30px; 
     }
 
-    .footer-full-text {
+    .footer-content .main-logo{
         display: none;
-        visibility: hidden;
+    }
+    .alternative-logo{
+        display: block;
+        font-size: 2.5rem;
+        line-height: 1;
+        align-self: flex-start;
     }
 }
 
