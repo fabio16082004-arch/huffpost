@@ -5,6 +5,7 @@
     --hover-gray: #a0a0a0;
 }
 
+
 html, body {
     margin: 0;
     padding: 0;
@@ -23,6 +24,12 @@ body {
 .nav {
     display: block;
     flex-direction: column; 
+}
+
+.nav-content .link-logo .main-logo {
+    width: 100px ;
+    min-width: 121px ;
+    height: auto;
 }
 
 .nav-content {
@@ -189,6 +196,7 @@ main {
 }
 
 .front-page a {
+    text-transform: uppercase;
     color: #000000;
     text-decoration: none;
     font-weight: 800;
@@ -237,12 +245,22 @@ main {
     background-color: #000;
 }
 
+/* =====================
+   SECTION LAYOUT & IMAGES
+   ===================== */
+
 /* GENERAL IMAGE RULES */
 .card-article img {
     width: 100%;
+    aspect-ratio: 16 / 9; 
     height: auto;
     display: block;
     object-fit: cover;
+}
+
+aside .card-article img {
+    width: auto;
+    aspect-ratio: 1 / 1; 
 }
 
 .card-article a, .games-item a, .news-item a {
@@ -258,6 +276,7 @@ main {
 .card-primary a {
     font-size: 2rem;
 }
+
 .card-secondary a {
     font-size: 1.25rem;
 }
@@ -270,9 +289,10 @@ main {
 }
 
 .card-secondary img {
-    width: calc(50% - 7.5px); 
-    height: auto; 
+    width: 160px;
     aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    height: auto; 
     object-fit: cover;
 }
 
@@ -281,8 +301,13 @@ main {
     line-height: 1.4;
     font-size: 1rem;
 }
+
 .card-compact a {
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+aside .card-compact a {
+    line-height: 1.1rem;
 }
 
 .aside-container article.card-article {
@@ -294,19 +319,6 @@ main {
     padding-bottom: 21px;
     border-bottom: 1px solid #ddd;
 }
-
-@media screen and (max-width: 1199px) {
-    .latest-news .container {
-        max-width: 100%;
-        padding: 0;
-    }
-}
-@media screen and (max-device-width: 1024px) {
-    .nav-secondary {
-        display: none;
-    }
-} 
-
 
 /* =====================
    HUFFPOST DAILY
@@ -379,28 +391,33 @@ main {
    HUFFPOST DAILY
    ===================== */
 
+.box.daily {
+    overflow: hidden;      
+}
+
 .daily-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2d6a4f; /* verde scuro come nell'immagine */
-    padding: 0.4rem 0.75rem;
-    gap: 0.75rem;
-    overflow: hidden;
-}
+    background-color: #2d6a4f;
+    padding: 0.4rem 0.75rem;}
 
 .ticker-wrap {
     flex: 1;
     overflow: hidden;
     white-space: nowrap;
+    position: relative;    
 }
 
-.ticker-content {
-    display: inline-block;
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.85rem;
+.ticker-track {
+    display: inline-flex;
     animation: ticker-scroll 12s linear infinite;
+}
+
+.ticker-item {
+    color: #fff;
+    padding-right: 1rem; 
+    flex-shrink: 0;
 }
 
 @keyframes ticker-scroll {
@@ -433,6 +450,7 @@ main {
 .checklist-content{
     padding: 14px 20px 35px;
     background-color: #f9f9f9;
+    margin-bottom: 54px;
 }
 
 .checklist-content > p{
@@ -477,8 +495,8 @@ main {
 .box.history{
     display: block;
     border: 1px dotted #2e7061;
-    margin-bottom: 54px;
     padding: 24px;
+    margin-bottom: 54px;
 }
 
 .history-title{
@@ -797,10 +815,14 @@ main {
 /* =====================
    SHOPPING and LIFE-2
    ===================== */
+.shopping, .life-2, .voices{
+    position: relative;
+    margin-block: 36px;
+}
+
 .shopping, .life-2{
+    position: relative;
     background-color: #EFEFEF;
-     background-color: #EFEFEF;
-    box-shadow: 0 0 0 20px #EFEFEF;
 }  
 
 .life-2 .card-article h3{
@@ -839,7 +861,15 @@ main {
 
 .voices{
     background-color: #F7EFEF;
-    box-shadow: 0 0 0 20px #F7EFEF;
+    position: relative; 
+}
+
+.voices::before, .life-2::before, .shopping::before{
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    z-index: -1;
+    inset: -36px;
 }
 
 #section-title-voices{
@@ -951,135 +981,6 @@ main {
     padding: 10px 0;
 }
 
-@media (max-width: 1024px) {
-    /*FOOTER*/
-      .footer-content .main-logo {
-        margin: 0;
-    }
-
-     .footer-content .link-logo{
-        height: 50px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "box-bold"
-            "box-normal";
-        padding: 40px 20px 38px;
-        gap: 30px 0;
-    }
-
-    .footer-box-bold {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, auto);
-        padding-right: 0;
-    }
-
-    .footer-box-normal {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(4, auto);
-    }
-
-    .branding {
-        margin: 0 20px;
-    }
-}
-
-@media (max-width: 767px) {
-    /*NAVBAR*/
-    .front-page img {
-        width: 100vw;       
-        height: auto;       
-        display: block;     
-    }
-
-    /*NAVBAR*/
-    .hide-nav{
-        animation: hide-nav-btn linear both;
-        animation-timeline: scroll(root);
-        animation-range: 80px 81px;
-        opacity: 1;
-    }
- 
-    @keyframes hide-nav-btn {
-        to { 
-            opacity: 0;
-            width: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-    }
-
-    /*FOOTER*/
-    .footer-content {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "box-bold"
-            "box-normal";
-        padding: 30px 20px;
-        gap: 20px 0;
-    }
-
-    .footer-title {
-        font-size: 1.8rem;
-        padding-right: 0;
-    }
-
-    .footer-box-bold {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, auto);
-        padding-right: 0;
-    }
-
-    .footer-box-normal {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(6, auto);
-    }
-
-    .branding {
-        display: block;
-        margin: 0 20px;
-        text-align: center;
-    }
-
-    .branding div {
-        padding: 5px 0;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-    .footer-content .link-logo {
-        display: flex; 
-        
-        width: auto; 
-        
-        align-self: start;
-        margin-right: 30px; 
-    }
-
-    .footer-content .main-logo{
-        display: none;
-    }
-    .alternative-logo{
-        display: block;
-        font-size: 2.5rem;
-        line-height: 1;
-        align-self: flex-start;
-    }
-}
-
-@media (min-width: 1024px) {
-    .footer-item a {
-        white-space: nowrap;
-    }
-}
-
-
 /* =====================
    GRID
    ===================== */
@@ -1090,16 +991,17 @@ main {
   gap: 20px clamp(20px, calc(100% - 700px - 320px), 100px);
   width: 100%;
   max-width: 1120px;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 32px auto 0;
 }
 
 .content-group, .sidebar-group {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     width: 100%; 
+}
+
+.content-group{
+    gap: 50px;
 }
 
 .content-group{
@@ -1139,9 +1041,64 @@ main {
 .shopping         { grid-area: shopping-2; }
 .voices           { grid-area: voices; }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+    .footer-item a {
+        white-space: nowrap;
+    }
+}
 
-    .content-group, 
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .footer-content .link-logo {
+        display: flex; 
+        
+        width: auto; 
+        
+        align-self: start;
+        margin-right: 30px; 
+    }
+
+    .footer-content .main-logo{
+        display: none;
+    }
+    .alternative-logo{
+        display: block;
+        font-size: 2.5rem;
+        line-height: 1;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .latest-news .container,
+    .whats-happening .container,
+    .life-1 .container,
+    .dont-miss .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* =====================
+   HISTORY
+   ===================== */
+
+    .box.history, .checklist-content{
+        margin-bottom: 0px;
+    }
+
+     .nav-secondary {
+        display: none;
+    }
+
+    /*FOOTER*/
+      .footer-content .main-logo {
+        margin: 0;
+    }
+
+     .footer-content .link-logo{
+        height: 50px;
+    }
+
+        .content-group, 
     .sidebar-group {
         display: contents;
     }
@@ -1168,6 +1125,7 @@ main {
             "life-2" 
             "shopping-2" 
             "voices";
+    row-gap: 30px;
   }
 
   .box.follow-us, .box.morning-mail, .box.shopping-aside {
@@ -1189,12 +1147,8 @@ main {
   /*GAMES*/
 
   .games-item{
-    align-items: flex-start;
+    align-items: center;
   }
-
-  .games-item img{
-    width: 100%;
-    }
 
   /*HUFFPOST DAILY*/
   .checklist-item > svg{
@@ -1206,5 +1160,143 @@ main {
     .box.submit-tip{
         border: none;
         padding: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "box-bold"
+            "box-normal";
+        padding: 40px 20px 38px;
+        gap: 30px 0;
+    }
+
+    .footer-box-bold {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        padding-right: 0;
+    }
+
+    .footer-box-normal {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .branding {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .card-secondary img {
+        max-width: none;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        flex-shrink: 1;
+    }
+
+    /*NAVBAR*/
+    .front-page img {
+        width: 100vw;       
+        height: auto;       
+        display: block;     
+    }
+
+    .hide-nav{
+        animation: hide-nav-btn linear both;
+        animation-timeline: scroll(root);
+        animation-range: 80px 81px;
+        opacity: 1;
+    }
+ 
+    @keyframes hide-nav-btn {
+        to { 
+            opacity: 0;
+            width: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+
+    /*LATEST NEWS*/
+
+    #head-first, #head-third{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    #head-second{
+        font-size: 2.375rem;
+        line-height: 1.125rem;
+        margin-bottom: 16px;
+        margin-top: 16px;
+        white-space: nowrap;
+    }
+
+    .card-secondary {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .card-secondary img {
+        width: 50%;
+        flex-shrink: 0;
+        
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        padding-right: calc(var(--bs-gutter-x) * .5);
+    }
+
+    /*GAMES*/
+    .games-item{
+        align-items: flex-start;
+    }
+
+    .games-item img{
+        width: 50%;
+    }
+    
+    .games-item h3{
+        width: 50%;
+    }
+
+    /*FOOTER*/
+    .footer-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "box-bold"
+            "box-normal";
+        padding: 30px 20px;
+        gap: 20px 0;
+    }
+
+    .footer-title {
+        font-size: 1.8rem;
+        padding-right: 0;
+    }
+
+    .footer-box-bold {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        padding-right: 0;
+    }
+
+    .footer-box-normal {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+
+    .branding {
+        display: block;
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .branding div {
+        padding: 5px 0;
     }
 }
