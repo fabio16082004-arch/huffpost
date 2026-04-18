@@ -109,7 +109,7 @@ body {
 }
 
 .nav-btn-cta {
-    background: #F83371;
+    background-color: #E31A5F;
     color: var(--text-light);
     border: none;
     padding: 6px 12px;
@@ -121,7 +121,7 @@ body {
 }
 
 .nav-btn-cta:hover {
-    background: #ef2c6a;
+    background: #D61557;
 }
 
 .nav .nav-text, 
@@ -556,7 +556,7 @@ aside .card-compact a {
 .history-year{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
-    color: #fe3d2e;
+    color: #D63427;
     font-size: .875rem;
     margin: 2px 0 20px;
 }
@@ -610,7 +610,7 @@ aside .card-compact a {
     margin-bottom: 12px;
 }
 
-.morning-mail-content > p{
+.morning-mail-label{
     font-size: 1.1rem;
     text-align: center;
     font-weight: 400;
@@ -630,6 +630,10 @@ aside .card-compact a {
     font-size: .75rem;
     margin-left: 16px;
     padding: 1px 2px 1px 20px;
+}
+
+.morning-mail-address::placeholder{
+    color: #000;
 }
 
 .morning-mail-address:focus {
@@ -794,7 +798,7 @@ aside .card-compact a {
 
 #section-title-life-2{
     font-size: 1.875rem;
-    background-color: #f4915b;
+    background-color: #C6652E;
     color: #fff;
     font-weight: 900;
     letter-spacing: 0.1rem;
@@ -843,7 +847,7 @@ aside .card-compact a {
 }
 
 #section-title-shopping{
-    background: linear-gradient(0deg, #f4915b 45%, transparent 0);
+    background: linear-gradient(0deg, #C6652E 45%, transparent 0);
     display: inline;
     font-size: 1.25rem;
     font-weight: 700;

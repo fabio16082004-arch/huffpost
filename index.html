@@ -14,21 +14,21 @@
     <nav class="nav">
         <div class="nav-content">
             <div class="nav-group">
-                <a class="nav-btn" href="#">
+                <button class="nav-btn" aria-label="menu">
                     <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-                </a>
+                </button>
 
-                <a class="nav-btn hide-nav" href="#">
+                <button class="nav-btn hide-nav" aria-label="notification">
                     <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                     <span class="nav-badge"></span>
-                </a>
+                </button>
 
-                <a class="nav-btn hide-nav" href="">
+                <button class="nav-btn hide-nav" aria-label="search">
                     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                      <span class="nav-badge"></span>
-                </a>
+                </button>
 
-                <a class="link-logo" href="">
+                <a class="link-logo" aria-label="huffpost">
                     <svg class="main-logo" width="484" height="64" viewBox="0 0 484 64" fill="none"><path d="M38.1175 62.6912H58.0557L68.7712 1.30896H48.8241L44.9146 23.2923H27.5975L31.5158 1.30896H11.5775L0.862061 62.6912H20.8092L24.8253 39.7285H42.1336L38.1175 62.6912Z" fill="white"></path><path d="M80.1088 1.30896L74.0136 35.4547C73.516 38.1526 73.2761 40.6634 73.2761 43.1565C73.2761 61.2934 89.1006 64.0001 98.5277 64.0001C118.413 64.0001 126.969 57.3757 130.097 39.5505L136.769 1.30896H116.822L111.153 33.3802C109.341 43.4147 108.053 48.6501 100.58 48.6501C95.72 48.6501 93.3565 46.068 93.3565 40.7614C93.3565 38.7402 93.6498 36.2383 94.2539 33.1042L100.047 1.30896H80.1088Z" fill="white"></path><path d="M242.316 62.6912H262.263L265.089 46.9049H274.48C291.886 46.9049 301.473 37.4581 301.473 20.2917C301.473 8.21824 293.103 1.30005 278.505 1.30005H253.031L242.316 62.6912ZM273.396 31.7775H267.639L270.313 17.3H275.68C280.06 17.3 282.468 19.526 282.468 23.5594C282.468 28.6256 278.994 31.7775 273.396 31.7775Z" fill="white"></path><path d="M340.302 0C318.569 0 305.596 14.0946 305.596 37.7162C305.596 54.1792 315.93 64 333.238 64C354.971 64 367.943 49.9054 367.943 26.2838C367.943 9.82081 357.61 0 340.302 0ZM334.437 48.1068C329.302 48.1068 326.237 44.3851 326.237 38.1436C326.237 35.7574 326.441 33.7273 326.912 31.35C328.449 23.3278 330.99 15.8932 339.102 15.8932C344.238 15.8932 347.303 19.6149 347.303 25.8564C347.303 28.2426 347.099 30.2727 346.628 32.65C345.091 40.6811 342.55 48.1157 334.437 48.1157V48.1068Z" fill="white"></path><path d="M437.317 62.6912H457.264L465.19 17.7363H480.25L483.138 1.30005H432.057L429.17 17.7363H445.136L437.317 62.6912Z" fill="white"></path><path d="M404.283 23.9955C397.992 22.01 395.398 21.1909 395.398 18.2348C395.398 16.2493 396.722 13.9343 400.445 13.9343C403.252 13.9343 405.571 15.5281 406.531 17.8787L424.168 13.1241C422.133 4.41625 414.661 0 401.857 0C377.716 0 375.842 16.2048 375.842 21.1731C375.842 31.2432 381.182 37.3956 392.652 40.5387C395.709 41.3489 399.192 42.2749 399.192 45.6583C399.192 48.3472 397.184 49.9588 393.816 49.9588C390.698 49.9588 387.392 48.0979 386.193 44.9638L368.787 49.6917C370.706 58.8091 379.28 64 392.732 64C402.977 64 420.161 61.2398 420.161 42.7201C420.161 33.4068 414.972 27.281 404.283 23.9955Z" fill="white"></path><path d="M148.213 1.30896L137.498 62.6912H157.445L160.599 44.6256H177.383L180.164 29.1687H163.398L165.255 17.7452H188.73L191.617 1.30896H148.213Z" fill="white"></path><path d="M200.564 1.30896L189.857 62.6912H209.796L212.95 44.6256H229.743L232.524 29.1687H215.749L217.606 17.7452H241.08L243.968 1.30896H200.564Z" fill="white"></path></svg>
                 </a>
             </div>
@@ -42,6 +42,7 @@
 
         <a href="">
             <h1 class="nav-logo">
+                <span class="visually-hidden">HuffPost</span>
                 <svg class="main-logo" width="484" height="64" viewBox="0 0 484 64" fill="none"><path d="M38.1175 62.6912H58.0557L68.7712 1.30896H48.8241L44.9146 23.2923H27.5975L31.5158 1.30896H11.5775L0.862061 62.6912H20.8092L24.8253 39.7285H42.1336L38.1175 62.6912Z" fill="white"></path><path d="M80.1088 1.30896L74.0136 35.4547C73.516 38.1526 73.2761 40.6634 73.2761 43.1565C73.2761 61.2934 89.1006 64.0001 98.5277 64.0001C118.413 64.0001 126.969 57.3757 130.097 39.5505L136.769 1.30896H116.822L111.153 33.3802C109.341 43.4147 108.053 48.6501 100.58 48.6501C95.72 48.6501 93.3565 46.068 93.3565 40.7614C93.3565 38.7402 93.6498 36.2383 94.2539 33.1042L100.047 1.30896H80.1088Z" fill="white"></path><path d="M242.316 62.6912H262.263L265.089 46.9049H274.48C291.886 46.9049 301.473 37.4581 301.473 20.2917C301.473 8.21824 293.103 1.30005 278.505 1.30005H253.031L242.316 62.6912ZM273.396 31.7775H267.639L270.313 17.3H275.68C280.06 17.3 282.468 19.526 282.468 23.5594C282.468 28.6256 278.994 31.7775 273.396 31.7775Z" fill="white"></path><path d="M340.302 0C318.569 0 305.596 14.0946 305.596 37.7162C305.596 54.1792 315.93 64 333.238 64C354.971 64 367.943 49.9054 367.943 26.2838C367.943 9.82081 357.61 0 340.302 0ZM334.437 48.1068C329.302 48.1068 326.237 44.3851 326.237 38.1436C326.237 35.7574 326.441 33.7273 326.912 31.35C328.449 23.3278 330.99 15.8932 339.102 15.8932C344.238 15.8932 347.303 19.6149 347.303 25.8564C347.303 28.2426 347.099 30.2727 346.628 32.65C345.091 40.6811 342.55 48.1157 334.437 48.1157V48.1068Z" fill="white"></path><path d="M437.317 62.6912H457.264L465.19 17.7363H480.25L483.138 1.30005H432.057L429.17 17.7363H445.136L437.317 62.6912Z" fill="white"></path><path d="M404.283 23.9955C397.992 22.01 395.398 21.1909 395.398 18.2348C395.398 16.2493 396.722 13.9343 400.445 13.9343C403.252 13.9343 405.571 15.5281 406.531 17.8787L424.168 13.1241C422.133 4.41625 414.661 0 401.857 0C377.716 0 375.842 16.2048 375.842 21.1731C375.842 31.2432 381.182 37.3956 392.652 40.5387C395.709 41.3489 399.192 42.2749 399.192 45.6583C399.192 48.3472 397.184 49.9588 393.816 49.9588C390.698 49.9588 387.392 48.0979 386.193 44.9638L368.787 49.6917C370.706 58.8091 379.28 64 392.732 64C402.977 64 420.161 61.2398 420.161 42.7201C420.161 33.4068 414.972 27.281 404.283 23.9955Z" fill="white"></path><path d="M148.213 1.30896L137.498 62.6912H157.445L160.599 44.6256H177.383L180.164 29.1687H163.398L165.255 17.7452H188.73L191.617 1.30896H148.213Z" fill="white"></path><path d="M200.564 1.30896L189.857 62.6912H209.796L212.95 44.6256H229.743L232.524 29.1687H215.749L217.606 17.7452H241.08L243.968 1.30896H200.564Z" fill="white"></path></svg>
             </h1>
         </a>
@@ -61,7 +62,7 @@
         <!--MAIN ARTICLE-->
         <article class="front-page">
             <h1><a id="title" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h1>
-            <img src="https://placehold.co/711x400" alt="" width="711" height="400">
+            <img src="https://placehold.co/711x400" alt="" width="711" height="400" alt="IMG 1">
             <a href="#">LATEST UPDATES...</a>
         </article>
 
@@ -77,7 +78,7 @@
                         <div class="row g-4">
 
                             <article class="card-article card-primary col-md-6">
-                                <img src="https://placehold.co/352x198" class="img-fluid mb-2" alt="IMG" width="352" height="198">
+                                <img src="https://placehold.co/352x198" class="img-fluid mb-2" alt="IMG 2" width="352" height="198">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
@@ -85,80 +86,80 @@
                                 <div class="row g-4">
 
                                     <article class="card-article card-secondary col-12 mb-3">
-                                        <img src="https://placehold.co/160x160" class="img-fluid" width="160" height="160">
+                                        <img src="https://placehold.co/160x160" class="img-fluid" alt="IMG 3" width="160" height="160">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
 
                                     <article class="card-article card-compact col-6">
-                                        <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                        <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 4" width="160" height="90">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
 
                                     <article class="card-article card-compact col-6">
-                                        <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                        <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 5" width="160" height="90">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
                                 </div>
                             </div>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 6" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 7" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 8" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                            <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 9" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 10" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
 
                              <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 11" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                              <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 12" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 13" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 14" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 15" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 16" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 17" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
@@ -191,7 +192,7 @@
                         <div class="row g-4">
 
                             <article class="card-article card-primary col-md-6">
-                                <img src="https://placehold.co/352x198" class="img-fluid mb-2" alt="IMG" width="352" height="198">
+                                <img src="https://placehold.co/352x198" class="img-fluid mb-2" alt="IMG 18" width="352" height="198">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
@@ -199,80 +200,80 @@
                                 <div class="row g-4">
 
                                     <article class="card-article card-secondary col-12 mb-3">
-                                        <img src="https://placehold.co/160x160" class="img-fluid" width="160" height="160">
+                                        <img src="https://placehold.co/160x160" class="img-fluid" alt="IMG 19" width="160" height="160">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
 
                                     <article class="card-article card-compact col-6">
-                                        <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                        <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 20" width="160" height="90">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
 
                                     <article class="card-article card-compact col-6">
-                                        <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                        <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 21" width="160" height="90">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
                                 </div>
                             </div>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 22" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 23" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 24" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                            <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 25" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 26" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
 
                              <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 27" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                              <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 28" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 29" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 30" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 31" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 32" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                               <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 33" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
@@ -285,7 +286,7 @@
                     </header>
                     
                     <div class="video-wrapper">
-                        <video width="640" autoplay muted controls>
+                        <video width="640" autoplay muted controls aria-label="short-description">
                         </video>
                     </div>
                 </section>
@@ -298,7 +299,7 @@
                         <div class="row g-4">
 
                             <article class="card-article card-primary col-md-6">
-                                <img src="https://placehold.co/352x198" class="img-fluid mb-2" alt="IMG" width="352" height="198">
+                                <img src="https://placehold.co/352x198" class="img-fluid mb-2" alt="IMG 34" width="352" height="198">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
@@ -306,34 +307,34 @@
                                 <div class="row g-4">
 
                                     <article class="card-article card-secondary col-12 mb-3">
-                                        <img src="https://placehold.co/160x160" class="img-fluid" width="160" height="160">
+                                        <img src="https://placehold.co/160x160" class="img-fluid" alt="IMG 35" width="160" height="160">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
 
                                     <article class="card-article card-secondary col-12">
-                                        <img src="https://placehold.co/160x160" class="img-fluid" width="160" height="160">
+                                        <img src="https://placehold.co/160x160" class="img-fluid" alt="IMG 36" width="160" height="160">
                                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                                     </article>
                                 </div>
                             </div>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 37" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 38" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 39" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 40" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
                         </div>
@@ -344,7 +345,7 @@
                         <h2 class="section-title">GAMES</h2>
                     </header>
                       <div class="games-item">
-                        <img src="https://placehold.co/160x160" alt="IMG">
+                        <img src="https://placehold.co/160x160" alt="IMG 41">
                         <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
                 </section>
@@ -357,74 +358,74 @@
                         <div class="row g-4">
 
                             <article class="card-article card-secondary col-md-6">
-                                <img src="https://placehold.co/160x160" class="img-fluid mb-2" alt="IMG" width="160" height="160">
+                                <img src="https://placehold.co/160x160" class="img-fluid mb-2" alt="IMG 42" width="160" height="160">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 43" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 44" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 45" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 46" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-secondary col-md-6">
-                                <img src="https://placehold.co/160x160" class="img-fluid mb-2" alt="IMG" width="160" height="160">
+                                <img src="https://placehold.co/160x160" class="img-fluid mb-2" alt="IMG 47" width="160" height="160">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 48" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="Scena di South Park" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 49" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                                 <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 50" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                           
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/200x100" class="img-fluid" alt="Scena di South Park" width="200" height="100">
+                                <img src="https://placehold.co/200x100" class="img-fluid" alt="IMG 51" width="200" height="100">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                                 <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 52" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 53" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 54" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="Scena di South Park" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 55" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
@@ -433,57 +434,57 @@
                 </section>
                 <section class="box other-news">
                     <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 56">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 57">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 58">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 59">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 60">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 61">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 62">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 63">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 64">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 65">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
 
                      <div class="news-item">
-                        <img src="https://placehold.co/400x200" alt="">
+                        <img src="https://placehold.co/400x200" alt="IMG 66">
                         <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                     </div>
                 </section>
@@ -496,22 +497,22 @@
                         <div class="row g-4">
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 67" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 68" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 69" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 70" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
                         </div>
@@ -524,22 +525,22 @@
                     <div class="container">
                         <div class="row g-4">
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 71" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 72" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 73" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 74" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
                         </div>
@@ -560,22 +561,22 @@
                         <div class="row g-4">
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 75" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 76" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 77" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 78" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
                         </div>
@@ -595,22 +596,22 @@
                     <div class="container">
                         <div class="row g-4">
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 79" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 80" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 81" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 82" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
                         </div>
@@ -629,22 +630,22 @@
                     <div class="container">
                         <div class="row g-4">
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 83" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 84" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 85" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 86" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
                         </div>
@@ -663,22 +664,22 @@
                     <div class="container">
                         <div class="row g-4">
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 87" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 88" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 89" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
 
                             <article class="card-article card-compact col-6 col-md-3">
-                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG" width="160" height="90">
+                                <img src="https://placehold.co/160x90" class="img-fluid" alt="IMG 90" width="160" height="90">
                                 <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
                             </article>
                         </div>
@@ -700,52 +701,52 @@
 
                     <div class="aside-container">
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 91" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 92" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 93" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 94" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 95" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 96" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                            <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 97" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 98" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                            <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 99" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
 
                         <article class="card-article card-compact">
-                                <img src="https://placehold.co/90x90" width="90" height="90">
+                                <img src="https://placehold.co/90x90" alt="IMG 100" width="90" height="90">
                                 <h3><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></h3>
                         </article>
                     </div>
@@ -762,7 +763,6 @@
                                 <span class="ticker-item">🌤 GOOD AFTERNOON</span>
                                 <span class="ticker-item">🌤 GOOD AFTERNOON</span>
                                 <span class="ticker-item">🌤 GOOD AFTERNOON</span>
-                                <!-- Duplicato per il loop seamless -->
                                 <span class="ticker-item">🌤 GOOD AFTERNOON</span>
                                 <span class="ticker-item">🌤 GOOD AFTERNOON</span>
                                 <span class="ticker-item">🌤 GOOD AFTERNOON</span>
@@ -783,28 +783,28 @@
                         <p>Complete your daily checklist!</p>
 
                         <div class="checklist-item">
-                            <img src="https://placehold.co/50x50" width="50" height="50">
+                            <img src="https://placehold.co/50x50" alt="IMG 101" width="50" height="50">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <svg width="26" height="32" viewBox="0 0 32 32" fill="none"><path d="M11 6L21 16L11 26" stroke="#626262" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                         </div>
                         <div class="checklist-item">
-                            <img src="https://placehold.co/50x50" width="50" height="50">
+                            <img src="https://placehold.co/50x50" alt="IMG 102" width="50" height="50">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <svg width="26" height="32" viewBox="0 0 32 32" fill="none"><path d="M11 6L21 16L11 26" stroke="#626262" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 
                         </div>
                         <div class="checklist-item">
-                            <img src="https://placehold.co/50x50" width="50" height="50">
+                            <img src="https://placehold.co/50x50" alt="IMG 103" width="50" height="50">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <svg width="26" height="32" viewBox="0 0 32 32" fill="none"><path d="M11 6L21 16L11 26" stroke="#626262" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                         </div>
                         <div class="checklist-item">
-                            <img src="https://placehold.co/50x50" width="50" height="50">
+                            <img src="https://placehold.co/50x50" alt="IMG 104" width="50" height="50">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <svg width="26" height="32" viewBox="0 0 32 32" fill="none"><path d="M11 6L21 16L11 26" stroke="#626262" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                         </div>
                         <div class="checklist-item">
-                            <img src="https://placehold.co/50x50" width="50" height="50">
+                            <img src="https://placehold.co/50x50" alt="IMG 105" width="50" height="50">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <svg width="26" height="32" viewBox="0 0 32 32" fill="none"><path d="M11 6L21 16L11 26" stroke="#626262" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                         </div>
@@ -849,10 +849,10 @@
                         <h2 class="morning-mail-title">The morning email</h2>
                     </header>
                     <div class="morning-mail-content">
-                        <p>Wake up to the day's most important news. Sign up for HuffPost's Morning Email.</p>
+                        <label for="email-signup" class="morning-mail-label">Wake up to the day's most important news. Sign up for HuffPost's Morning Email.</label>
 
                         <form class="morning-mail-input">
-                            <input type="email" placeholder="address@email.com" class="morning-mail-address">
+                            <input type="email" id="email-signup" placeholder="address@email.com" class="morning-mail-address">
                             <button class="morning-mail-signup-button">
                                 SIGN UP
                             </button>
@@ -876,16 +876,17 @@
 
                     <div class="social-buttons">
                         <div class="social-buttons-item">
-                            <a href="#">
+                            <a href="#" aria-label="facebook">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                         </div>
                         <div class="social-buttons-item">
-                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            
+                            <a href="#" aria-label="x">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a> 
                         </div>
                         <div class="social-buttons-item">
-                            <a href="#">
+                            <a href="#" aria-label="instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </div>
