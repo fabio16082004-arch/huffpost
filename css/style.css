@@ -320,6 +320,15 @@ body {
     text-decoration: underline solid;
 }
 
+.nav .nav-link:visited,
+.nav-content .nav-link:visited,
+.nav-secondary .nav-link:visited,
+.nav .nav-link:active,
+.nav-content .nav-link:active,
+.nav-secondary .nav-link:active {
+    color: white;
+}
+
 .nav-logo {
     margin-top: 50px;
     margin-bottom: 0;
